@@ -1,19 +1,19 @@
 {
-  "dependencies": {
-    "@prisma/client": "^6.15.0",
-    "express": "^5.1.0"
+  "scripts": {
+    "dev:saas-backend": "cd saas-backend && npm run dev",
+    "dev:saas-frontend": "cd saas-frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:saas-backend\" \"npm run dev:saas-frontend\""
   },
   "devDependencies": {
-    "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
-    "nodemon": "^3.1.10",
-    "prisma": "^6.15.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "concurrently": "^8.0.0",
+    "prisma": "^6.15.0"
   },
-  "scripts": {
-    "dev": "nodemon --watch src --exec ts-node src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js"
+  "dependencies": {
+    "@next-auth/prisma-adapter": "^1.0.7",
+    "@prisma/client": "^6.15.0",
+    "@types/next-auth": "^3.13.0",
+    "next-auth": "^4.24.11",
+    "nodemailer": "^6.10.1"
   }
 }
